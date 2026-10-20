@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PKL-Link: Generator Portofolio SMK</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Bagian Form Input (Sembunyi saat dicetak) -->
+    <div class="input-section hidden-print">
+      <h2>Data Siswa PKL</h2>
+      
+      <label>Nama Lengkap:</label>
+      <input type="text" id="inputNama" placeholder="Contoh: Budi Santoso">
+
+      <label>Jurusan:</label>
+      <input type="text" id="inputJurusan" placeholder="Contoh: Rekayasa Perangkat Lunak">
+
+      <label>Judul Proyek / Pekerjaan:</label>
+      <input type="text" id="inputProyek" placeholder="Contoh: Sistem Kasir Berbasis Web">
+
+      <label>Deskripsi Proyek:</label>
+      <textarea id="inputDeskripsi" rows="4" placeholder="Ceritakan apa saja yang kamu kerjakan selama PKL..."></textarea>
+
+      <button onclick="cetakPDF()">Simpan / Cetak PDF</button>
+    </div>
+
+    <!-- Bagian Preview Portofolio -->
+    <div class="preview-section">
+      <h1 id="prevNama">Nama Siswa</h1>
+      <h3 id="prevJurusan">Jurusan</h3>
+      <hr>
+      <h2>Proyek PKL: <span id="prevProyek">Judul Proyek</span></h2>
+      <p id="prevDeskripsi">Deskripsi proyek akan muncul secara real-time di sini saat kamu mengetik.</p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
