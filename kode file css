@@ -1,0 +1,65 @@
+* { 
+  box-sizing: border-box; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+body { 
+  margin: 0; 
+  padding: 20px; 
+  background-color: #f0f2f5; 
+}
+.container { 
+  display: flex; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+}
+.input-section, .preview-section { 
+  flex: 1; 
+  min-width: 300px; 
+  padding: 30px; 
+  background: white; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+input, textarea { 
+  width: 100%; 
+  padding: 12px; 
+  margin: 8px 0 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 6px; 
+}
+button { 
+  background-color: #2563eb; 
+  color: white; 
+  border: none; 
+  padding: 12px 24px; 
+  cursor: pointer; 
+  border-radius: 6px; 
+  font-weight: bold; 
+  width: 100%;
+}
+button:hover { 
+  background-color: #1d4ed8; 
+}
+hr { 
+  border: 0; 
+  border-top: 3px solid #2563eb; 
+  margin: 20px 0; 
+}
+
+/* Aturan CSS Khusus untuk fitur "Cetak ke PDF" */
+@media print {
+  body { 
+    background-color: white; 
+    padding: 0; 
+  }
+  .hidden-print { 
+    display: none; /* Menyembunyikan form input saat diprint */
+  }
+  .container { 
+    display: block; 
+  }
+  .preview-section { 
+    box-shadow: none; /* Menghilangkan bayangan agar rapi di kertas */
+    padding: 0; 
+  }
+}
