@@ -1,0 +1,31 @@
+// 1. Menangkap elemen Input
+const inputNama = document.getElementById('inputNama');
+const inputJurusan = document.getElementById('inputJurusan');
+const inputProyek = document.getElementById('inputProyek');
+const inputDeskripsi = document.getElementById('inputDeskripsi');
+
+// 2. Menangkap elemen Preview
+const prevNama = document.getElementById('prevNama');
+const prevJurusan = document.getElementById('prevJurusan');
+const prevProyek = document.getElementById('prevProyek');
+const prevDeskripsi = document.getElementById('prevDeskripsi');
+
+// 3. Fungsi untuk memperbarui tampilan preview
+function updatePreview() {
+    // Jika input kosong, gunakan teks default
+    prevNama.innerText = inputNama.value || "Nama Siswa";
+    prevJurusan.innerText = inputJurusan.value || "Jurusan";
+    prevProyek.innerText = inputProyek.value || "Judul Proyek";
+    prevDeskripsi.innerText = inputDeskripsi.value || "Deskripsi proyek akan muncul secara real-time di sini saat kamu mengetik.";
+}
+
+// 4. Memicu fungsi update setiap kali pengguna mengetik (event 'input')
+inputNama.addEventListener('input', updatePreview);
+inputJurusan.addEventListener('input', updatePreview);
+inputProyek.addEventListener('input', updatePreview);
+inputDeskripsi.addEventListener('input', updatePreview);
+
+// 5. Fungsi bawaan browser untuk memunculkan dialog Print/Simpan PDF
+function cetakPDF() {
+    window.print();
+}
